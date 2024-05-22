@@ -1,2 +1,3 @@
-# faster_whisper_infer_server
-‌‌An inference service based on faster_whisper and the HTTP protocol
+# Whisper-jax-infer
+
+An inference server based on whisper-jax through the HTTP protocol

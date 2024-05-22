@@ -1,0 +1,25 @@
+[project]
+name = "whisper-jax-infer"
+version = "0.0.1"
+authors = [
+    {name = "harry", email = "yelcat@gmail.com"},
+]
+description = "Whisper Jax Inference Service"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["ASR", "Speech"]
+license = {text = "GPLv3"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "jax[cuda12]>=0.4.28",
+    "whisper-jax>=0.0.1",
+    "kui>=1.6.0",
+    "loguru>=0.6.0",
+    "zibai-server>=0.9.0"
+]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"

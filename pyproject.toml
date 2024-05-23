@@ -15,9 +15,7 @@ classifiers = [
 dependencies = [
     "jax[cuda12]>=0.4.28",
     "whisper-jax>=0.0.1",
-    "kui>=1.6.0",
-    "loguru>=0.6.0",
-    "zibai-server>=0.9.0"
+    "fastapi>=0.1.2",
 ]
 
 [build-system]

@@ -7,7 +7,7 @@ NVIDIA graphics cards supporting CUDA 12 with at least 10GB of VRAM
 
 ##　Software dependency
 docker nvidia-container-toolkit
-[[https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html]]
+[container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)
 
 ## How to build
 ‘‘‘bash

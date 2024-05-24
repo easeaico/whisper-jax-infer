@@ -5,7 +5,7 @@ An OpenAI Audio Speech-to-Text API-compatible inference service using Whisper-JA
 ## Hardware requirement
 NVIDIA graphics cards supporting CUDA 12 with at least 10GB of VRAM
 
-##　Software dependency
+## Software dependency
 docker nvidia-container-toolkit
 [container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)
 

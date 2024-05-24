@@ -1,3 +1,3 @@
 # Whisper-jax Inference Server
 
-An inference server based on whisper-jax and FastAPI.
+An OpenAI Audio Speech-to-Text API-compatible inference service using Whisper-JAX and FastAPI.

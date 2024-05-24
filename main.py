@@ -2,13 +2,17 @@ from typing import Annotated
 from fastapi import FastAPI, Form, File
 from whisper_jax import FlaxWhisperPipline
 
+import jax.numpy as jnp
+
 app = FastAPI()
 pipeline = None
 
 
 def preload(audio):
     global pipeline
-    pipeline = FlaxWhisperPipline("openai/whisper-large-v3")
+
+    # instantiate pipeline in bfloat16
+    pipeline = FlaxWhisperPipline("openai/whisper-large-v2", dtype=jnp.bfloat16)
     return pipeline(audio)
 
 

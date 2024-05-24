@@ -12,7 +12,7 @@ def preload(audio):
     global pipeline
 
     # instantiate pipeline in bfloat16
-    pipeline = FlaxWhisperPipline("openai/whisper-large-v2", dtype=jnp.bfloat16)
+    pipeline = FlaxWhisperPipline("openai/whisper-large-v3", dtype=jnp.bfloat16)
     return pipeline(audio)
 
 

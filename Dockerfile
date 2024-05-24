@@ -1,6 +1,6 @@
 FROM nvidia/cuda:12.2.2-devel-rockylinux9
 
-RUN dnf -y update && dnf install -y python39 python3.9-pip git && dnf clean all 
+RUN dnf -y update && dnf install -y python39 python3.9-pip git ffmpeg ffmpeg-devel && dnf clean all 
 RUN pip install --no-cache-dir --upgrade pip
 
 WORKDIR /work

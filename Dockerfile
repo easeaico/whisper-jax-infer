@@ -1,5 +1,7 @@
 FROM nvidia/cuda:12.2.2-devel-rockylinux9
 
+RUN dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
+RUN dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 RUN dnf -y update && dnf install -y python39 python3.9-pip git ffmpeg ffmpeg-devel && dnf clean all 
 RUN pip install --no-cache-dir --upgrade pip
 

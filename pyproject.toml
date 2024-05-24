@@ -6,7 +6,7 @@ authors = [
 ]
 description = "Whisper Jax Inference Service"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 keywords = ["ASR", "Speech"]
 license = {text = "GPLv3"}
 classifiers = [

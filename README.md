@@ -10,12 +10,12 @@ docker nvidia-container-toolkit
 [container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)
 
 ## How to build
-‘‘‘bash
+```bash
 docker build . -t whisper-jax-infer
-’’’
+```
 
 ## How to run
-‘‘‘bash
-docker run -d -p 8050 --runtime=nvidia --gpus all whisper-jax-infer
-’’’
+```bash
+docker run -d -p 8050:8050 --runtime=nvidia --gpus all whisper-jax-infer
+```
 

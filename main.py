@@ -18,7 +18,21 @@ def api_infer(file: Annotated[bytes, File()], model: Annotated[str, Form()]):
     Invoke model and recognize audio
     """
     global pipeline
+
     if pipeline is None:
         return preload(file)
     else:
         return pipeline(file)
+
+
+@app.get("/preload")
+def preload_model():
+    """
+    Preload model
+    """
+    global pipeline
+
+    if pipeline is None:
+        preload("audio.mp3")
+
+    return {"status": "ok"}

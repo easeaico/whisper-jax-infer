@@ -4,12 +4,13 @@ from whisper_jax import FlaxWhisperPipline
 
 from contextlib import asynccontextmanager
 import jax.numpy as jnp
+import os
 
 context = {}
 
 
 async def preload(data_file):
-    pipeline = FlaxWhisperPipline(checkpoint="./data", dtype=jnp.bfloat16)
+    pipeline = FlaxWhisperPipline(checkpoint=os.path.join("./data"), dtype=jnp.bfloat16)
     pipeline(data_file)
     context["pipeline"] = pipeline
 

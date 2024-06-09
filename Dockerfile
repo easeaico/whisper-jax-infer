@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.2.2-devel-rockylinux9
+FROM nvidia/cuda:12.2.2-runtime-rockylinux9
 
 RUN dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
 RUN dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm

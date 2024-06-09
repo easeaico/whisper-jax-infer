@@ -8,15 +8,15 @@ import jax.numpy as jnp
 context = {}
 
 
-def preload(data_file):
-    pipeline = FlaxWhisperPipline("openai/whisper-large-v3", dtype=jnp.bfloat16)
+async def preload(data_file):
+    pipeline = FlaxWhisperPipline(checkpoint="./data", dtype=jnp.bfloat16)
     pipeline(data_file)
     context["pipeline"] = pipeline
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
-    preload("audio.mp3")
+async def lifespan(_: FastAPI):
+    await preload("audio.mp3")
     yield
     context.clear()
 

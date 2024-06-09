@@ -12,5 +12,6 @@ RUN pip install --no-cache-dir git+https://github.com/sanchit-gandhi/whisper-jax
 RUN pip install --no-cache-dir -e .
 
 EXPOSE 8050
+VOLUME [ "/work/data" ]
 
 CMD ["fastapi", "run", "main.py", "--host", "0.0.0.0", "--port", "8050"]
